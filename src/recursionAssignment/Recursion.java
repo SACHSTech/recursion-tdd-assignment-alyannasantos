@@ -38,4 +38,10 @@ public class Recursion{
     return counter;
   }
 
+  // Problem Set 2 - changePi
+  public static String changePi(String str) {
+
+    return null;
+  }
+
 }

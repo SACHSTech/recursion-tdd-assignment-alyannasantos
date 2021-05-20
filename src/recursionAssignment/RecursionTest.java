@@ -72,6 +72,60 @@ public class RecursionTest{
 
     }
 
+    @Test
+    public void TestChangePiNoPi(){
+
+        String input = "xxxx";
+        String expected = "xxxx";
+
+        Recursion recursion = new Recursion();
+        assertEquals(expected, recursion.changePi(input));
+
+    }
+
+    @Test
+    public void TestChangePiBeginningPi(){
+
+        String input = "pixx";
+        String expected = "3.14xx";
+
+        Recursion recursion = new Recursion();
+        assertEquals(expected, recursion.changePi(input));
+
+    }
+
+    @Test
+    public void TestChangePiMiddlePi(){
+
+        String input = "xpix";
+        String expected = "x3.14x";
+
+        Recursion recursion = new Recursion();
+        assertEquals(expected, recursion.changePi(input));
+
+    }
+
+    @Test
+    public void TestChangePiEndPi(){
+
+        String input = "xxxpi";
+        String expected = "xxx3.14";
+
+        Recursion recursion = new Recursion();
+        assertEquals(expected, recursion.changePi(input));
+
+    }
+
+    @Test
+    public void TestChangePiMultiplePi(){
+
+        String input = "pipipi";
+        String expected = "3.143.143.14";
+
+        Recursion recursion = new Recursion();
+        assertEquals(expected, recursion.changePi(input));
+
+    }
 
     //@After
     //public void afterTest(){
