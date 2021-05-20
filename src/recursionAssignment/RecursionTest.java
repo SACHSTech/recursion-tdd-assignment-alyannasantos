@@ -17,7 +17,7 @@ public class RecursionTest{
      * An initial test
      */
     @Test
-    public void TestOneDigit(){
+    public void TestCount7OneDigit(){
 
         int input = 7;
         int expected = 1;
@@ -29,7 +29,7 @@ public class RecursionTest{
     
     // add more tests
     @Test
-    public void TestTwoDigit(){
+    public void TestCount7TwoDigit(){
 
         int input = 76;
         int expected = 1;
@@ -40,7 +40,7 @@ public class RecursionTest{
     }
 
     @Test
-    public void TestThreeDigit(){
+    public void TestCount7ThreeDigit(){
 
         int input = 707;
         int expected = 2;
@@ -51,7 +51,7 @@ public class RecursionTest{
     }
 
     @Test
-    public void TestZero(){
+    public void TestCount7Zero(){
 
         int input = 0;
         int expected = 0;
@@ -62,7 +62,7 @@ public class RecursionTest{
     }
 
     @Test
-    public void TestNegative(){
+    public void TestCount7Negative(){
 
         int input = -7;
         int expected = -1;
@@ -71,7 +71,6 @@ public class RecursionTest{
         assertEquals(expected, recursion.count7(input));
 
     }
-
 
 
     //@After
