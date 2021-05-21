@@ -83,6 +83,42 @@ public class Recursion{
 
   public static String stringClean(String str) {
 
-    return null;
+    if (str == null || str.length() == 0) {
+      return "";
+    }
+
+    int curIndex = 0; 
+    int maxIndex = str.length() - 1;
+    int lastUniqueIndex = 0;
+    return checkCharacters(str, curIndex, maxIndex, lastUniqueIndex);
   }
+
+  private static String checkCharacters(String strInput, int curIndex, int maxIndex, int lastUniqueIndex) {
+
+    if (curIndex > maxIndex) {
+      return "";
+    }
+
+    String result = "";
+    String lastUniqueString = strInput.charAt(lastUniqueIndex) + "";
+    String currentString = strInput.charAt(curIndex) + "";
+    
+
+    if (curIndex == lastUniqueIndex) {
+      result = strInput.charAt(curIndex) + "";
+      curIndex++;
+    } else if (lastUniqueString.equals(currentString)) {
+      result = "";
+      curIndex++;
+    } else {
+      result = currentString;
+      lastUniqueIndex = curIndex;
+      curIndex++;
+    } 
+    System.out.println("LUS: " + lastUniqueString + " CS: " + currentString + "  RESULT: " + result);
+
+    result = result + checkCharacters(strInput, curIndex, maxIndex, lastUniqueIndex);
+    return result;
+  }
+
 }
