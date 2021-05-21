@@ -41,7 +41,32 @@ public class Recursion{
   // Problem Set 2 - changePi
   public static String changePi(String str) {
 
-    return null;
+    int curIndex = 0;
+    int maxIndex = str.length() - 1;
+    return checkPi(str, curIndex, maxIndex);
+  }
+
+  private static String checkPi(String strInput, int curIndex, int maxIndex) {
+
+    if (curIndex > maxIndex) {
+      return "";
+    } else if (curIndex == maxIndex) {
+      return strInput.charAt(curIndex) + "";
+    }
+
+    String pi = "pi";
+    String result = "";
+
+    if (pi.equals(strInput.substring(curIndex, curIndex + 2))) {
+      result = "3.14";
+      curIndex = curIndex + 2;
+    } else {
+      result = strInput.charAt(curIndex) + "";
+      curIndex = curIndex + 1;
+    }
+
+    result = result + checkPi(strInput, curIndex, maxIndex);
+    return result;
   }
 
 }
