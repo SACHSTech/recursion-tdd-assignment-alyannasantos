@@ -22,8 +22,7 @@ public class RecursionTest{
         int input = 7;
         int expected = 1;
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.count7(input));
+        assertEquals(expected, Recursion.count7(input));
 
     }
     
@@ -34,8 +33,7 @@ public class RecursionTest{
         int input = 76;
         int expected = 1;
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.count7(input));
+        assertEquals(expected, Recursion.count7(input));
 
     }
 
@@ -45,8 +43,7 @@ public class RecursionTest{
         int input = 707;
         int expected = 2;
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.count7(input));
+        assertEquals(expected, Recursion.count7(input));
 
     }
 
@@ -56,8 +53,7 @@ public class RecursionTest{
         int input = 0;
         int expected = 0;
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.count7(input));
+        assertEquals(expected, Recursion.count7(input));
 
     }
 
@@ -67,8 +63,7 @@ public class RecursionTest{
         int input = -7;
         int expected = -1;
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.count7(input));
+        assertEquals(expected, Recursion.count7(input));
 
     }
 
@@ -78,8 +73,7 @@ public class RecursionTest{
         String input = "xxxx";
         String expected = "xxxx";
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.changePi(input));
+        assertEquals(expected, Recursion.changePi(input));
 
     }
 
@@ -89,8 +83,7 @@ public class RecursionTest{
         String input = "pixx";
         String expected = "3.14xx";
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.changePi(input));
+        assertEquals(expected, Recursion.changePi(input));
 
     }
 
@@ -100,8 +93,7 @@ public class RecursionTest{
         String input = "xpix";
         String expected = "x3.14x";
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.changePi(input));
+        assertEquals(expected, Recursion.changePi(input));
 
     }
 
@@ -111,8 +103,7 @@ public class RecursionTest{
         String input = "xxxpi";
         String expected = "xxx3.14";
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.changePi(input));
+        assertEquals(expected, Recursion.changePi(input));
 
     }
 
@@ -122,8 +113,17 @@ public class RecursionTest{
         String input = "pipipi";
         String expected = "3.143.143.14";
 
-        Recursion recursion = new Recursion();
-        assertEquals(expected, recursion.changePi(input));
+        assertEquals(expected, Recursion.changePi(input));
+
+    }
+
+    @Test
+    public void TestStringCleanNone(){
+
+        String input = "abcd";
+        String expected = "abcd";
+
+        assertEquals(expected, Recursion.stringClean(input));
 
     }
 

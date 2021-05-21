@@ -1,5 +1,10 @@
 package recursionAssignment;
 
+/**
+* This java program uses recursion methods to get results
+* @author: Alyanna Santos
+*
+*/
 public class Recursion{
 
   // Problem Set 1 - count7
@@ -41,30 +46,37 @@ public class Recursion{
   // Problem Set 2 - changePi
   public static String changePi(String str) {
 
+    // initial values
     int curIndex = 0;
     int maxIndex = str.length() - 1;
     return checkPi(str, curIndex, maxIndex);
   }
 
+  // recursive method
   private static String checkPi(String strInput, int curIndex, int maxIndex) {
 
+    // end of recursion when 1 or no more characters left to evaluate
     if (curIndex > maxIndex) {
       return "";
     } else if (curIndex == maxIndex) {
       return strInput.charAt(curIndex) + "";
     }
 
+    // initialize variables
     String pi = "pi";
     String result = "";
+    String piNum = "3.14";
 
+    // convert "pi" to 3.14
     if (pi.equals(strInput.substring(curIndex, curIndex + 2))) {
-      result = "3.14";
+      result = piNum;
       curIndex = curIndex + 2;
     } else {
       result = strInput.charAt(curIndex) + "";
       curIndex = curIndex + 1;
     }
 
+    // join resulting string together
     result = result + checkPi(strInput, curIndex, maxIndex);
     return result;
   }
