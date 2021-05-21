@@ -81,42 +81,48 @@ public class Recursion{
     return result;
   }
 
+  // Problem Set 3 - stringClean
   public static String stringClean(String str) {
 
+    // null or empty inputs returns empty string
     if (str == null || str.length() == 0) {
       return "";
     }
 
+    // initial values
     int curIndex = 0; 
     int maxIndex = str.length() - 1;
     int lastUniqueIndex = 0;
     return checkCharacters(str, curIndex, maxIndex, lastUniqueIndex);
   }
 
+  // recursive method
   private static String checkCharacters(String strInput, int curIndex, int maxIndex, int lastUniqueIndex) {
 
+    // end of recursion when maximum index is reached
     if (curIndex > maxIndex) {
       return "";
     }
 
+    // initialize variables
     String result = "";
     String lastUniqueString = strInput.charAt(lastUniqueIndex) + "";
     String currentString = strInput.charAt(curIndex) + "";
     
-
+    // derive resulting string based on current character and last unique character
     if (curIndex == lastUniqueIndex) {
-      result = strInput.charAt(curIndex) + "";
-      curIndex++;
+      result = currentString;
     } else if (lastUniqueString.equals(currentString)) {
       result = "";
-      curIndex++;
     } else {
       result = currentString;
       lastUniqueIndex = curIndex;
-      curIndex++;
     } 
-    System.out.println("LUS: " + lastUniqueString + " CS: " + currentString + "  RESULT: " + result);
 
+    // position current index to next index
+    curIndex++;
+
+    // join resulting string
     result = result + checkCharacters(strInput, curIndex, maxIndex, lastUniqueIndex);
     return result;
   }

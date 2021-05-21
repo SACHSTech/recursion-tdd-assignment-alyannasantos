@@ -17,154 +17,148 @@ public class RecursionTest{
      * An initial test
      */
     @Test
-    public void TestCount7OneDigit(){
+    public void TestCount7OneDigit() {
 
         int input = 7;
         int expected = 1;
 
         assertEquals(expected, Recursion.count7(input));
-
     }
     
     // add more tests
     @Test
-    public void TestCount7TwoDigit(){
+    public void TestCount7TwoDigit() {
 
         int input = 76;
         int expected = 1;
 
         assertEquals(expected, Recursion.count7(input));
-
     }
 
     @Test
-    public void TestCount7ThreeDigit(){
+    public void TestCount7ThreeDigit() {
 
         int input = 707;
         int expected = 2;
 
         assertEquals(expected, Recursion.count7(input));
-
     }
 
     @Test
-    public void TestCount7Zero(){
+    public void TestCount7Zero() {
 
         int input = 0;
         int expected = 0;
 
         assertEquals(expected, Recursion.count7(input));
-
     }
 
     @Test
-    public void TestCount7Negative(){
+    public void TestCount7Negative() {
 
         int input = -7;
         int expected = -1;
 
         assertEquals(expected, Recursion.count7(input));
-
     }
 
     @Test
-    public void TestChangePiNoPi(){
+    public void TestChangePiNoPi() {
 
         String input = "xxxx";
         String expected = "xxxx";
 
         assertEquals(expected, Recursion.changePi(input));
-
     }
 
     @Test
-    public void TestChangePiBeginningPi(){
+    public void TestChangePiBeginningPi() {
 
         String input = "pixx";
         String expected = "3.14xx";
 
         assertEquals(expected, Recursion.changePi(input));
-
     }
 
     @Test
-    public void TestChangePiMiddlePi(){
+    public void TestChangePiMiddlePi() {
 
         String input = "xpix";
         String expected = "x3.14x";
 
         assertEquals(expected, Recursion.changePi(input));
-
     }
 
     @Test
-    public void TestChangePiEndPi(){
+    public void TestChangePiEndPi() {
 
         String input = "xxxpi";
         String expected = "xxx3.14";
 
         assertEquals(expected, Recursion.changePi(input));
-
     }
 
     @Test
-    public void TestChangePiMultiplePi(){
+    public void TestChangePiMultiplePi() {
 
         String input = "pipipi";
         String expected = "3.143.143.14";
 
         assertEquals(expected, Recursion.changePi(input));
-
     }
 
     @Test
-    public void TestStringCleanNone(){
+    public void TestStringCleanNone() {
 
         String input = "abcd";
         String expected = "abcd";
 
         assertEquals(expected, Recursion.stringClean(input));
-
     }
 
     @Test
-    public void TestStringCleanOne(){
+    public void TestStringCleanOne() {
 
         String input = "hello";
         String expected = "helo";
 
         assertEquals(expected, Recursion.stringClean(input));
-
     }
 
     @Test
-    public void TestStringCleanTwo(){
+    public void TestStringCleanTwo() {
 
         String input = "aaabcc";
         String expected = "abc";
 
         assertEquals(expected, Recursion.stringClean(input));
-
     }
 
     @Test
-    public void TestStringCleanALot(){
+    public void TestStringCleanALot() {
 
         String input = "qqqqqwwwwerrrttyyyyy";
         String expected = "qwerty";
 
         assertEquals(expected, Recursion.stringClean(input));
-
     }
 
     @Test
-    public void TestStringCleanEmpty(){
+    public void TestStringCleanEmpty() {
 
         String input = "";
         String expected = "";
 
         assertEquals(expected, Recursion.stringClean(input));
+    }
 
+    @Test
+    public void TestStringCleanNull() {
+
+        String input = null;
+        String expected = "";
+
+        assertEquals(expected, Recursion.stringClean(input));
     }
 
     //@After
