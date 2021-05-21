@@ -127,6 +127,46 @@ public class RecursionTest{
 
     }
 
+    @Test
+    public void TestStringCleanOne(){
+
+        String input = "hello";
+        String expected = "helo";
+
+        assertEquals(expected, Recursion.stringClean(input));
+
+    }
+
+    @Test
+    public void TestStringCleanTwo(){
+
+        String input = "aaabcc";
+        String expected = "abc";
+
+        assertEquals(expected, Recursion.stringClean(input));
+
+    }
+
+    @Test
+    public void TestStringCleanALot(){
+
+        String input = "qqqqqwwwwerrrttyyyyy";
+        String expected = "qwerty";
+
+        assertEquals(expected, Recursion.stringClean(input));
+
+    }
+
+    @Test
+    public void TestStringCleanEmpty(){
+
+        String input = "";
+        String expected = "";
+
+        assertEquals(expected, Recursion.stringClean(input));
+
+    }
+
     //@After
     //public void afterTest(){
     //  // some steps to perform after tests are run
